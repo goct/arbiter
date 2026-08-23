@@ -1,0 +1,38 @@
+{
+ "Altar of Fangs": {
+  "high": 2005.0,
+  "low": 1862.7
+ },
+ "Den of Nalorakk": {
+  "high": 2557.9,
+  "low": 1918.4
+ },
+ "Kings' Rest": {
+  "high": null,
+  "low": 1711.5,
+  "note": "known from BfA; the +3 at 49.7% under confirms it",
+  "par": 2040.0
+ },
+ "Murder Row": {
+  "high": 2606.0,
+  "low": 1954.5
+ },
+ "Ruby Life Pools": {
+  "high": 1942.8,
+  "low": 1554.2,
+  "note": "known from Dragonflight; the +1 at 13.7% under confirms it",
+  "par": 1800.0
+ },
+ "Temple of Sethraliss": {
+  "high": 2719.3,
+  "low": 2175.5
+ },
+ "The Blinding Vale": {
+  "high": 2314.8,
+  "low": 1736.1
+ },
+ "Voidscar Arena": {
+  "high": 2932.9,
+  "low": 2199.7
+ }
+}

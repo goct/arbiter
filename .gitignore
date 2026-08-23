@@ -1,0 +1,19 @@
+# Combat logs. Gigabytes, and not ours to publish.
+WoWCombatLog*.txt
+*.log
+
+# Graded nights and their exports. These name real players and grade their play;
+# the tool belongs in the repo, the verdicts on other people's keys do not.
+mplus-grades-*.md
+grades-*.md
+night-*.json
+*-night.json
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

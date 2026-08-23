@@ -1,0 +1,5769 @@
+{
+  "season": "season-mn-2",
+  "raiderIOGenerated": "2026-08-18T07:38:58Z",
+  "extracted": "2026-08-19T00:03:25Z",
+  "poolMissingAMapping": [],
+  "zones": [
+    {
+      "zone": "Kings' Rest",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs_BattleForAzeroth\\KingsRest",
+      "bosses": [
+        {
+          "boss": "The Council of Tribes",
+          "encounterID": 2140,
+          "file": "Council.lua",
+          "abilities": [
+            {
+              "spellID": 266191,
+              "name": "Whirling Axe",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 266206,
+              "name": "Whirling Axes",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 266231,
+              "name": "Severing Axe",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 266237,
+              "name": "Debilitating Backhand",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 266238,
+              "name": "Shattered Defenses",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 266951,
+              "name": "Barrel Through",
+              "flags": [
+                "SAY",
+                "SAY_COUNTDOWN"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 267060,
+              "name": "Call of the Elements",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 267273,
+              "name": "Poison Nova",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 267494,
+              "name": "Barrel Through",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Dazar, The First King",
+          "encounterID": 2143,
+          "file": "Dazar.lua",
+          "abilities": [
+            {
+              "spellID": 268403,
+              "name": "Gale Slash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 268586,
+              "name": "Blade Combo",
+              "flags": [
+                "TANK_HEALER"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "A",
+              "why": "tank damage, heal through"
+            },
+            {
+              "spellID": 268932,
+              "name": "Quaking Leap",
+              "flags": [
+                "SAY",
+                "ICON"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 269231,
+              "name": "Hunting Leap",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 269369,
+              "name": "Deathly Roar",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1302945,
+              "name": "Impaling Spear",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1303039,
+              "name": "Hunting Leap",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1303267,
+              "name": "Gilded Destruction",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1303490,
+              "name": "Savage Maul",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "The Golden Serpent",
+          "encounterID": 2139,
+          "file": "GoldenSerpent.lua",
+          "abilities": [
+            {
+              "spellID": 265773,
+              "name": "Spit Gold",
+              "flags": [
+                "SAY",
+                "SAY_COUNTDOWN"
+              ],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.mainDebuffNote",
+              "renamed": true,
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 265781,
+              "name": "Serpentine Gust",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 265910,
+              "name": "Tail Thrash",
+              "flags": [
+                "TANK_HEALER"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "A",
+              "why": "tank damage, heal through"
+            },
+            {
+              "spellID": 265914,
+              "name": "Molten Gold",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 265923,
+              "name": "Lucre's Call",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1306736,
+              "name": "Spit Gold (pre-application)",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.preDebuffNote",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Mchimba the Embalmer",
+          "encounterID": 2142,
+          "file": "Mchimba.lua",
+          "abilities": [
+            {
+              "spellID": 267618,
+              "name": "Drain Fluids",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 267626,
+              "name": "Desiccation",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 267639,
+              "name": "Burn Corruption",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 267702,
+              "name": "Entomb",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 267874,
+              "name": "Burning Ground",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Temple of Sethraliss",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs_BattleForAzeroth\\TempleOfSethraliss",
+      "bosses": [
+        {
+          "boss": "Adderis and Aspix",
+          "encounterID": 2124,
+          "file": "AdderisAspix.lua",
+          "abilities": [
+            {
+              "spellID": 263246,
+              "name": "Lightning Shield",
+              "flags": [
+                "ICON"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 263257,
+              "name": "Static Shock",
+              "flags": [
+                "CASTBAR"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 263309,
+              "name": "Cyclone Strike",
+              "flags": [
+                "SAY",
+                "FLASH",
+                "CASTBAR"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 263371,
+              "name": "Conduction",
+              "flags": [
+                "SAY",
+                "SAY_COUNTDOWN"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 263424,
+              "name": "Arc Dash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1288457,
+              "name": "Gust",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1288885,
+              "name": "Tempest Winds",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Avatar of Sethraliss",
+          "encounterID": 2127,
+          "file": "Avatar.lua",
+          "abilities": [
+            {
+              "spellID": 268007,
+              "name": "Heart Attack",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 268008,
+              "name": "Snake Charm",
+              "flags": [
+                "DISPEL"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "magic",
+              "class": "A",
+              "why": "dispel"
+            },
+            {
+              "spellID": 268024,
+              "name": "Pulse",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 269686,
+              "name": "Plague",
+              "flags": [
+                "DISPEL"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "disease",
+              "class": "A",
+              "why": "dispel"
+            },
+            {
+              "spellID": 269688,
+              "name": "Rain of Toads",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 274149,
+              "name": "Life Force",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300714,
+              "name": "Shadowlash",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300877,
+              "name": "Corruption",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1302618,
+              "name": "Vile Charge",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1302826,
+              "name": "Corruption Burst",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1303446,
+              "name": "Tainted Strike",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1311979,
+              "name": "Latent Hex",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Galvazzt",
+          "encounterID": 2126,
+          "file": "Galvazzt.lua",
+          "abilities": [
+            {
+              "spellID": 266512,
+              "name": "Consume Charge",
+              "flags": [
+                "CASTBAR"
+              ],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 266923,
+              "name": "Galvanize",
+              "flags": [
+                "INFOBOX"
+              ],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1291815,
+              "name": "Induction Field",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            }
+          ]
+        },
+        {
+          "boss": "Merektha",
+          "encounterID": 2125,
+          "file": "Merektha.lua",
+          "abilities": [
+            {
+              "spellID": 263912,
+              "name": "Noxious Breath",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 263914,
+              "name": "Blinding Sand",
+              "flags": [
+                "CASTBAR"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 263927,
+              "name": "Toxic Pool",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 263958,
+              "name": "A Knot of Snakes",
+              "flags": [
+                "SAY",
+                "ICON"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 264206,
+              "name": "Burrow",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 264239,
+              "name": "Hatch",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1289109,
+              "name": "Thunder Spit",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1289588,
+              "name": "Thunder Spit",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1289589,
+              "name": "Lingering Storm",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1290030,
+              "name": "A Knot of Snakes",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1297034,
+              "name": "Electrified Ground",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Ruby Life Pools",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs_Dragonflight\\RubyLifePools",
+      "bosses": [
+        {
+          "boss": "Kokia Blazehoof",
+          "encounterID": 2606,
+          "file": "KokiaBlazehoof.lua",
+          "abilities": [
+            {
+              "spellID": 372107,
+              "name": "Molten Boulder",
+              "flags": [
+                "SAY"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 372820,
+              "name": "Scorched Earth",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 372858,
+              "name": "Searing Blows",
+              "flags": [
+                "TANK_HEALER"
+              ],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "A",
+              "why": "tank damage, heal through"
+            },
+            {
+              "spellID": 372860,
+              "name": "Searing Wounds",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 372863,
+              "name": "Ritual of Blazebinding",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 372865,
+              "name": "Ritual of Blazebinding",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 373017,
+              "name": "Roaring Blaze",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 373087,
+              "name": "Burnout",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 384823,
+              "name": "Inferno",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Kyrakka and Erkhart Stormvein",
+          "encounterID": 2623,
+          "file": "KyrakkaAndErkhartStormvein.lua",
+          "abilities": [
+            {
+              "spellID": 381512,
+              "name": "Stormslam",
+              "flags": [
+                "DISPEL"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "magic",
+              "class": "A",
+              "why": "dispel"
+            },
+            {
+              "spellID": 381515,
+              "name": "Stormslam",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffTankAfterCastNote",
+              "dispel": "magic",
+              "class": "A",
+              "why": "dispel"
+            },
+            {
+              "spellID": 381516,
+              "name": "Interrupting Cloudburst",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 381517,
+              "name": "Winds of Change",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 381518,
+              "name": "Winds of Change",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 381525,
+              "name": "Roaring Firebreath",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 381602,
+              "name": "Flamespit",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 381862,
+              "name": "Infernocore",
+              "flags": [
+                "SAY",
+                "SAY_COUNTDOWN"
+              ],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 384773,
+              "name": "Flaming Embers",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            }
+          ]
+        },
+        {
+          "boss": "Melidrussa Chillworn",
+          "encounterID": 2609,
+          "file": "MelidrussaChillworn.lua",
+          "abilities": [
+            {
+              "spellID": 372682,
+              "name": "Primal Chill",
+              "flags": [
+                "DISPEL"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "movement",
+              "class": "A",
+              "why": "dispel"
+            },
+            {
+              "spellID": 372851,
+              "name": "Chillstorm",
+              "flags": [
+                "SAY",
+                "SAY_COUNTDOWN",
+                "ME_ONLY_EMPHASIZE"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "lands on you"
+            },
+            {
+              "spellID": 372963,
+              "name": "Storm's Eye",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 372988,
+              "name": "Ice Bulwark",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 373046,
+              "name": "Awaken Whelps",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 373680,
+              "name": "Frost Overload",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 373688,
+              "name": "Frost Overload",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 384024,
+              "name": "Hailbombs",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 385518,
+              "name": "Chillstorm",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 396044,
+              "name": "Hailbombs",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Murder Row",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs\\Midnight/MurderRow",
+      "bosses": [
+        {
+          "boss": "Kystia Manaheart",
+          "encounterID": 3101,
+          "file": "KystiaManaheart.lua",
+          "abilities": [
+            {
+              "spellID": 474240,
+              "name": "Fel Nova",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1228198,
+              "name": "Corroding Spittle",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alert"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alert)"
+            },
+            {
+              "spellID": 1230304,
+              "name": "Light Infusion",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1253811,
+              "name": "Fel Spray",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1253813,
+              "name": "Fel Spray",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1264095,
+              "name": "Mirror Images",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            }
+          ]
+        },
+        {
+          "boss": "Lithiel Cinderfury",
+          "encounterID": 3105,
+          "file": "LithielCinderfury.lua",
+          "abilities": [
+            {
+              "spellID": 474408,
+              "name": "Summon Vilefiend",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1214730,
+              "name": "Demonic Gateway",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1217384,
+              "name": "Malefic Wave",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1218203,
+              "name": "Fingers of Gul'dan",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1224478,
+              "name": "Malefic Wave",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            }
+          ]
+        },
+        {
+          "boss": "Xathuux the Annihilator",
+          "encounterID": 3103,
+          "file": "XathuuxTheAnnihilator.lua",
+          "abilities": [
+            {
+              "spellID": 473898,
+              "name": "Legion Strike",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 474197,
+              "name": "Demonic Rage",
+              "flags": [
+                "CASTBAR"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 474234,
+              "name": "Burning Steps",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1214637,
+              "name": "Axe Toss",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1214650,
+              "name": "Fel Lightning",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1295453,
+              "name": "Infernal Crush",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1295455,
+              "name": "Infernal Crush",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Zaen Bladesorrow",
+          "encounterID": 3102,
+          "file": "ZaenBladesorrow.lua",
+          "abilities": [
+            {
+              "spellID": 474478,
+              "name": "Killing Spree",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 474515,
+              "name": "Heartstop Poison",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alert"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alert)"
+            },
+            {
+              "spellID": 474545,
+              "name": "Murder in a Row",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnRemoved": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 474740,
+              "name": "Murder in a Row",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 474765,
+              "name": "Same-Day Delivery",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1214352,
+              "name": "Fire Bomb",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1214357,
+              "name": "Fire Bomb",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1218347,
+              "name": "Murder in a Row",
+              "flags": [
+                "CASTBAR",
+                "CASTBAR_COUNTDOWN"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1219631,
+              "name": "Fel-Infused Freight",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1222795,
+              "name": "Envenom",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "The Blinding Vale",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs\\Midnight/TheBlindingVale",
+      "bosses": [
+        {
+          "boss": "Ikuzz the Light Hunter",
+          "encounterID": 3200,
+          "file": "IkuzzTheLightHunter.lua",
+          "abilities": [
+            {
+              "spellID": 1236709,
+              "name": "Thorncaller Roar",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1236746,
+              "name": "Verdant Stomp",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1236747,
+              "name": "Verdant Stomp",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1237090,
+              "name": "Bloodthirsty Gaze",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1237091,
+              "name": "Bloodthirsty Gaze",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1237267,
+              "name": "Incise",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1259365,
+              "name": "Bloodthorn Roots",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1272290,
+              "name": "Crunched",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Lightblossom Trinity",
+          "encounterID": 3199,
+          "file": "LightblossomTrinity.lua",
+          "abilities": [
+            {
+              "spellID": 1234753,
+              "name": "Bedrock Slam",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1234802,
+              "name": "Fertile Loam",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1234850,
+              "name": "Lightsower Dash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235564,
+              "name": "Lightblossom Beam",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235574,
+              "name": "Lightblossom Beam",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1235640,
+              "name": "Thornblade",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235828,
+              "name": "Light-Scorched Earth",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1235865,
+              "name": "Thornblade",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alert"
+              },
+              "note": "CL.mainDebuffNote",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alert)"
+            },
+            {
+              "spellID": 1261276,
+              "name": "",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.preDebuffNote",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1276586,
+              "name": "Bedrock Surge",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Lightwarden Ruia",
+          "encounterID": 3201,
+          "file": "LightwardenRuia.lua",
+          "abilities": [
+            {
+              "spellID": 1239824,
+              "name": "Lightfire",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1239825,
+              "name": "Lightfire",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1239882,
+              "name": "Shapeshift: Moonkin",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1239883,
+              "name": "Shapeshift: Haranir",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1239885,
+              "name": "Shapeshift: Bear",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1239919,
+              "name": "Lightfire Beams",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1240098,
+              "name": "Lightfall",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1240210,
+              "name": "Pulverizing Strikes",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1241058,
+              "name": "Grievous Thrash",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1257094,
+              "name": "Pulverized",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Ziekket",
+          "encounterID": 3202,
+          "file": "Ziekket.lua",
+          "abilities": [
+            {
+              "spellID": 1246372,
+              "name": "Awaken the Lightbloom",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1246607,
+              "name": "Concentrated Lightbeam",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1246751,
+              "name": "Concentrated Lightbeam",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1246753,
+              "name": "Lightsap",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1246858,
+              "name": "Lightbloom's Essence",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1247052,
+              "name": "Lightbloom's Might",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1247685,
+              "name": "Thornspike",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1247746,
+              "name": "Thornspike",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Den of Nalorakk",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs\\Midnight/DenOfNalorakk",
+      "bosses": [
+        {
+          "boss": "Nalorakk Den",
+          "encounterID": 3209,
+          "file": "Nalorakk.lua",
+          "abilities": [
+            {
+              "spellID": 1242860,
+              "name": "Echoing Maul",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1242869,
+              "name": "Echoing Maul",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1243011,
+              "name": "Fury of the War God",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1243569,
+              "name": "Overwhelming Onslaught",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1243590,
+              "name": "Overwhelming Onslaught",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1255577,
+              "name": "Spectral Slash",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm",
+                "soundOnAppliedDose": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1261781,
+              "name": "Defensive Stance",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1262253,
+              "name": "Demoralizing Scream",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            }
+          ]
+        },
+        {
+          "boss": "Sentinel of Winter",
+          "encounterID": 3208,
+          "file": "SentinelOfWinter.lua",
+          "abilities": [
+            {
+              "spellID": 1235548,
+              "name": "Glacial Torment",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235549,
+              "name": "Glacial Torment",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alert"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alert)"
+            },
+            {
+              "spellID": 1235623,
+              "name": "Raging Squall",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235641,
+              "name": "Raging Squall",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1235656,
+              "name": "Frozen Tempest",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235783,
+              "name": "Shattering Frostspike",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235829,
+              "name": "Winter's Shroud",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning",
+                "soundOnAppliedDose": "warning"
+              },
+              "note": "CL.debuffFailureInterruptNote:format",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1235841,
+              "name": "Snowdrift",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1236289,
+              "name": "Blizzard's Wrath",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1263597,
+              "name": "Rime Detonation",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1297749,
+              "name": "Frozen Tempest",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            }
+          ]
+        },
+        {
+          "boss": "The Hoardmonger",
+          "encounterID": 3207,
+          "file": "TheHoardmonger.lua",
+          "abilities": [
+            {
+              "spellID": 1234233,
+              "name": "Spoiled Supplies",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1234681,
+              "name": "Ravenous Bellow",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1234846,
+              "name": "Toxic Spores",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info",
+                "soundOnAppliedDose": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1235118,
+              "name": "Ravenous Bellow",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1235125,
+              "name": "Hearty Bellow",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1235405,
+              "name": "Bonespiked",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1253268,
+              "name": "Earthshatter Slam",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Voidscar Arena",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs\\Midnight/VoidscarArena",
+      "bosses": [
+        {
+          "boss": "Atroxus",
+          "encounterID": 3286,
+          "file": "Atroxus.lua",
+          "abilities": [
+            {
+              "spellID": 1222371,
+              "name": "Provoke Creeper",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1222484,
+              "name": "Poison Pool",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1222642,
+              "name": "Hulking Claw",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffTankAfterCastNote:format",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1222692,
+              "name": "Toxic Aura",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1222721,
+              "name": "Noxious Breath",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1226031,
+              "name": "Poison Splash",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffHitByCastNote:format",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1226120,
+              "name": "Poison Splash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1262497,
+              "name": "Monstrous Roar",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1263971,
+              "name": "Mind-Numbing Poison",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1282892,
+              "name": "Sickening Bite",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm",
+                "soundOnAppliedDose": "alarm"
+              },
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1283506,
+              "name": "Fixate (doesn't work due to a Blizzard bug)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            }
+          ]
+        },
+        {
+          "boss": "Charonus",
+          "encounterID": 3287,
+          "file": "Charonus.lua",
+          "abilities": [
+            {
+              "spellID": 1222755,
+              "name": "Void Cascade",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1227247,
+              "name": "Void Cascade",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffFailureNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1227264,
+              "name": "Cosmic Crash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1263982,
+              "name": "Gravitic Orbs",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1263983,
+              "name": "Condensed Mass",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1264188,
+              "name": "Unstable Singularity",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1282770,
+              "name": "Unstable Singularity",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1287450,
+              "name": "Condensed Mass",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.debuffPossibleAfterCastNote:format",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1300372,
+              "name": "Cosmic Crash",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffDotAfterCastNote:format",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1310026,
+              "name": "Atomized",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.debuffHitByCastNote:format",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1311923,
+              "name": "Dark Waves",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1311933,
+              "name": "Dark Waves",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            }
+          ]
+        },
+        {
+          "boss": "Taz'Rah",
+          "encounterID": 3285,
+          "file": "TazRah.lua",
+          "abilities": [
+            {
+              "spellID": 1222098,
+              "name": "Nether Dash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1222103,
+              "name": "Nether Dash",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1296963,
+              "name": "Umbral Rupture",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1296967,
+              "name": "Void Fissure",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1297017,
+              "name": "Void Blast",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300259,
+              "name": "Dark Bloom",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Altar of Fangs",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\LittleWigs\\Midnight/AltarOfFangs",
+      "bosses": [
+        {
+          "boss": "Rav'i",
+          "encounterID": 3456,
+          "file": "Ravi.lua",
+          "abilities": [
+            {
+              "spellID": 1296050,
+              "name": "Regurgitate",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1296216,
+              "name": "Ssscavenging",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1296220,
+              "name": "Triple Shot",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1297876,
+              "name": "Triple Shot",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "CL.debuffPossibleAfterCastNote:format",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1307700,
+              "name": "Carrion Burst",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.debuffDotAfterCastNote:format",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1307703,
+              "name": "Fresh Meat",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1307894,
+              "name": "Ravenous Stomp",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1307915,
+              "name": "Ravenous Stomp",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "CL.debuffHitByCastNote:format",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            }
+          ]
+        },
+        {
+          "boss": "The Writhing Coil",
+          "encounterID": 3457,
+          "file": "TheWrithingCoil.lua",
+          "abilities": [
+            {
+              "spellID": 1298949,
+              "name": "Tail Scythe",
+              "flags": [
+                "TANK_HEALER"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "A",
+              "why": "tank damage, heal through"
+            },
+            {
+              "spellID": 1299053,
+              "name": "Death Rattle",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1299080,
+              "name": "Death Rattle",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1299130,
+              "name": "Burrowing Charge",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1299154,
+              "name": "Synchronized Venom",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1299189,
+              "name": "Synchronized Venom",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1299940,
+              "name": "Vindictive Onslaught",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300044,
+              "name": "Venom Jet",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300503,
+              "name": "Spiteful Hunt",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300686,
+              "name": "Assimilation",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1310357,
+              "name": "Preparing Toxin",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1310358,
+              "name": "Toxic Atrophy",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1310547,
+              "name": "Toxic Atrophy",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1310974,
+              "name": "Toxic Atrophy",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Zul'jan",
+          "encounterID": 3458,
+          "file": "Zuljan.lua",
+          "abilities": [
+            {
+              "spellID": 1300876,
+              "name": "Ritual of the Fang",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300885,
+              "name": "Ritual of the Fang",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300894,
+              "name": "Ritual Venom",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1301111,
+              "name": "Axegrinder",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1301231,
+              "name": "Bloodletting",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "CL.debuffUnderYouNote",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1301350,
+              "name": "Chop Down",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 1301413,
+              "name": "Boneslicer",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1301508,
+              "name": "Boneslicer",
+              "flags": [],
+              "aura": true,
+              "sounds": {},
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "The Venomous Abyss",
+      "path": "D:/World of Warcraft/_retail_/Interface/AddOns\\BigWigs_TheVenomousAbyss\\",
+      "bosses": [
+        {
+          "boss": "The Coiled Altar",
+          "encounterID": 3429,
+          "file": "CoiledAltar.lua",
+          "abilities": [
+            {
+              "spellID": 1282281,
+              "name": "Venomfang",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1282419,
+              "name": "Volatile Venom",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1282487,
+              "name": "Fangs of the Coiled Altar",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1283290,
+              "name": "Noxious Ground",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1283345,
+              "name": "Twinfang Toxin",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "Tank stacks",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1283485,
+              "name": "Guillotine",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Targeted",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1283489,
+              "name": "Guillotine",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1283832,
+              "name": "Axegrinder",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1285017,
+              "name": "Axegrinder",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1285911,
+              "name": "Unnerving Fixation",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1286399,
+              "name": "Wail of Terror",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "Kick fail",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1286441,
+              "name": "Spiritcackle",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1286573,
+              "name": "Soul Sever",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1286837,
+              "name": "Gravebound",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1286895,
+              "name": "Gloombomb",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1286901,
+              "name": "Gloombomb",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1286918,
+              "name": "Eternal Nightfall",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1286947,
+              "name": "Suffocating Darkness",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1289900,
+              "name": "Dreadmarch",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1297435,
+              "name": "Dreadmarch XXX not applied to players?",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Targeted",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1297445,
+              "name": "Dreadmarch",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Possessed",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1298381,
+              "name": "Defilement of the Coiled Altar",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1298591,
+              "name": "Defiled Groound",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1298594,
+              "name": "Defilement of the Coiled Altar",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1298795,
+              "name": "Corrupted Toxin",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "Tank stacks",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1299266,
+              "name": "Grim Guillotine",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Targeted",
+              "renamed": true,
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1299680,
+              "name": "Sever",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1299838,
+              "name": "Venom Rupture",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1299960,
+              "name": "Toxic Deluge",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300665,
+              "name": "Spirit Erasure",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1301690,
+              "name": "Sever",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Tank cone",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1306906,
+              "name": "Venomfang",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1307279,
+              "name": "Blighted Sever",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1307403,
+              "name": "Blighted Sever",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Tank cone",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1307425,
+              "name": "Guillotined",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Soaked",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1307652,
+              "name": "Guillotined",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Soaked",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1307959,
+              "name": "Soul Sever",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Tank cone",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1310498,
+              "name": "Mutagenic Venom",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1310744,
+              "name": "Malevolent Resonance",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "The Lost Explorers",
+          "encounterID": 3497,
+          "file": "Explorers.lua",
+          "abilities": [
+            {
+              "spellID": 1286921,
+              "name": "Icebound Flames",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1286922,
+              "name": "Icebound Flames",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1290711,
+              "name": "Blink Nova",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1291390,
+              "name": "Cataclysmic Invocation",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1291759,
+              "name": "Shell Spin",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1291918,
+              "name": "Shell Spin (Stunned)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1291929,
+              "name": "Steady Strikes",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1291933,
+              "name": "Throw Junk",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1292104,
+              "name": "Mushroom Toss",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1292779,
+              "name": "Final Ascension",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1295817,
+              "name": "Fling Fish",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1295854,
+              "name": "Shredding Shards",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 1295858,
+              "name": "Shredding Shards",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.tank_debuff",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1295886,
+              "name": "Frostfire Volley",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1295928,
+              "name": "Burning Flames (Fire debuff, clears ice)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1295935,
+              "name": "Frostfire Volley (Frost - Targetted)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1295952,
+              "name": "Elemental Explosion",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1295954,
+              "name": "Piercing Frost (Ice debuff, clears fire)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1296025,
+              "name": "Blink Nova (Targetted)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1296092,
+              "name": "Mighty Thud",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1296249,
+              "name": "Explosive Surprise",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1296535,
+              "name": "Disgusting Fish",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1297022,
+              "name": "Mor'zahi's Command",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1297625,
+              "name": "Explosive Surprise (Targeted)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1297648,
+              "name": "Frost Patch (Standing in fire)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1297649,
+              "name": "Fire Patch (Standing in ice)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1297650,
+              "name": "Spreading Flames",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1299854,
+              "name": "Bounce (Mushroom bounce)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1305844,
+              "name": "Blast Wave (Explosion DoT)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1308853,
+              "name": "Splinters (Junk stacks)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1310500,
+              "name": "Aftershock",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Nek'zali the Soulcoiler",
+          "encounterID": 3470,
+          "file": "Nekzali.lua",
+          "abilities": [
+            {
+              "spellID": 1284103,
+              "name": "Possession Barrage",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1284109,
+              "name": "Hollowing Strikes -- Tank Stacks",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.tank_debuff",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1285623,
+              "name": "Soulcoil Well",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1285681,
+              "name": "Soulcoil Ignition",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1287426,
+              "name": "Essence Rend",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1287434,
+              "name": "Essence Rend",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1287533,
+              "name": "Gravebound Advance",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1288554,
+              "name": "Latent Cultist",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1288772,
+              "name": "Soulcoil Rite",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1289696,
+              "name": "Tether of Awakening",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1289875,
+              "name": "Cremation",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1290361,
+              "name": "Soulcoiled",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1292036,
+              "name": "Possession Barrage",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1292751,
+              "name": "Soulcoiled",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1293212,
+              "name": "Grasping Depths",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1293214,
+              "name": "Grasping Depths",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1294933,
+              "name": "Slithering Flame -- Note: Failed Soaking",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1295397,
+              "name": "Restless Amani",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1297624,
+              "name": "Ritual Burn",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1298698,
+              "name": "Residual Toll",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1299673,
+              "name": "Invoke",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1299988,
+              "name": "Immortal Coil",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300235,
+              "name": "Soul Exhaustion",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300239,
+              "name": "Swirling Spirit",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300521,
+              "name": "Immortal Coil",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300524,
+              "name": "Immortal Coil",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1305421,
+              "name": "Hungering Pyre",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1305993,
+              "name": "Residual Toll -- XXX removed?",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1306666,
+              "name": "Hungering Pyre",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1307939,
+              "name": "Corpse Blight",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Entombed Sentinels",
+          "encounterID": 3445,
+          "file": "Sentinels.lua",
+          "abilities": [
+            {
+              "spellID": 1284210,
+              "name": "Blood Venom -- Standing in bad",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1284251,
+              "name": "Venom Coagulation",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1284434,
+              "name": "Toxic Droplets",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1284458,
+              "name": "Empowering Slam",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 1284471,
+              "name": "Blighted Blood -- DoT; Drops pool when removed",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1284483,
+              "name": "Blighted Blood",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1284487,
+              "name": "Bloodvenom Injection",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 1284491,
+              "name": "Bloodvenom Injection -- Tank stacks; Drops pool when expires",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.tank_debuff",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1284500,
+              "name": "Mark of Acid",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1284506,
+              "name": "Mark of Blood",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1284588,
+              "name": "Vitriolic Stasis",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1284590,
+              "name": "Helical Toxins",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1284947,
+              "name": "Cultivated Burst -- Fail DoT",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1288232,
+              "name": "Unstable Miasma",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1288260,
+              "name": "Unstable Miasma",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1288297,
+              "name": "Clinging Murk -- Soaked Miasma; Drops pool when expires",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1296878,
+              "name": "Shifting Protovenom",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1296880,
+              "name": "Shifting Protovenom",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            }
+          ]
+        },
+        {
+          "boss": "Sszorak",
+          "encounterID": 3420,
+          "file": "Sszorak.lua",
+          "abilities": [
+            {
+              "spellID": 1277025,
+              "name": "Apex Predator",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1277051,
+              "name": "Mutilated Gash",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Frontal soaked",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1277105,
+              "name": "Ravage",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "Tank frontal",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1285425,
+              "name": "Raging Crosswinds",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Launches North",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1285453,
+              "name": "Raging Crosswinds (South)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Launches South",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1285732,
+              "name": "Howling Maelstrom",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1287083,
+              "name": "Tempest",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "Snare",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1296667,
+              "name": "Caustic Residue",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1296898,
+              "name": "Unbound Ferocity",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1297096,
+              "name": "Raging Crosswinds (East)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Launches East",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1297111,
+              "name": "Raging Crosswinds (West)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "Launches West",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1297707,
+              "name": "Virulence (Left)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Left",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1299899,
+              "name": "Virulence (Right)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Right",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1305621,
+              "name": "Serpent's Fury,",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1305959,
+              "name": "Venomous Surge",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1305963,
+              "name": "Venomous Surge",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            }
+          ]
+        },
+        {
+          "boss": "The Twin Fangs",
+          "encounterID": 3421,
+          "file": "TwinFangs.lua",
+          "abilities": [
+            {
+              "spellID": 1288538,
+              "name": "Stone Breaker",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 1289092,
+              "name": "Stone Breaker",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1289192,
+              "name": "Caustic Deluge",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1290336,
+              "name": "Eternal Venom",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1290516,
+              "name": "Ravenous Feast",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1290809,
+              "name": "Coiling Ichor",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1290814,
+              "name": "Coiling Ichor",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1290956,
+              "name": "Stir the Depths",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1291404,
+              "name": "Venomous Emergence",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1291478,
+              "name": "Corrosive Spit",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1292552,
+              "name": "Congealed Gore",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1292807,
+              "name": "Stir the Depths",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1293792,
+              "name": "Flood",
+              "flags": [
+                "CASTBAR"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1293979,
+              "name": "Corrosive Spit",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1294293,
+              "name": "Vile Flood",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1294605,
+              "name": "Vile Flood",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1303230,
+              "name": "Blood Torrent",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1303235,
+              "name": "Blood Torrent",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1306872,
+              "name": "Sanguine Storm",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1306925,
+              "name": "Congealed Gore",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1308356,
+              "name": "Rouse the Brood",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1308386,
+              "name": "Visceral Burst",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1309471,
+              "name": "Noxious Slick",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1310096,
+              "name": "Feasted",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1310102,
+              "name": "Tainted Blood",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1310360,
+              "name": "Envenomed",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Ula'tek",
+          "encounterID": 3492,
+          "file": "Ulatek.lua",
+          "abilities": [
+            {
+              "spellID": 1286860,
+              "name": "Rage of the Shackled",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1286905,
+              "name": "Fury Unleashed",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1287036,
+              "name": "Poisonous Bite",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1292188,
+              "name": "Caustic Waves",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1292999,
+              "name": "Submerge",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1295360,
+              "name": "Malignant Shell",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1295905,
+              "name": "Serpent's Bite",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1296301,
+              "name": "Mephitic Thrash",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1298367,
+              "name": "Mother's Wrath",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1298417,
+              "name": "Stone Venom",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "Tank stacks",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1298559,
+              "name": "Gore Rattle",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300312,
+              "name": "Doomscale Shell",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1300530,
+              "name": "Spectral Coils",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1300751,
+              "name": "Call of the Serpent",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1301268,
+              "name": "Putrid Membrane",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1301510,
+              "name": "Demolish",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1302982,
+              "name": "Virulent Spit",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1306119,
+              "name": "Calcified Corpse",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "alarm"
+              },
+              "note": "Petrified",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (alarm)"
+            },
+            {
+              "spellID": 1306388,
+              "name": "Greasy Hatchling",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Achievement",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1306393,
+              "name": "Butter Fingers",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "Achievement",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1307612,
+              "name": "Noxious Shell",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "DoT",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        },
+        {
+          "boss": "Vashnik the Malignant",
+          "encounterID": 3455,
+          "file": "Vashnik.lua",
+          "abilities": [
+            {
+              "spellID": 1280189,
+              "name": "Malignant Burst",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1280934,
+              "name": "Dripping Fangs",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.tank_debuff",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1280935,
+              "name": "Dripping Fangs",
+              "flags": [
+                "TANK"
+              ],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "tank only"
+            },
+            {
+              "spellID": 1281907,
+              "name": "Plague Froth",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1281908,
+              "name": "Plague Froth (Heroic & Mythic)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1281913,
+              "name": "Plague Froth (Heroic & Mythic)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1282117,
+              "name": "Adaptive Infection",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1282525,
+              "name": "Malignant Catalyst",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1283164,
+              "name": "Imbibe",
+              "flags": [],
+              "aura": false,
+              "sounds": {},
+              "note": "",
+              "renamed": true,
+              "dispel": "",
+              "class": "C",
+              "why": "no healer flag in source"
+            },
+            {
+              "spellID": 1285979,
+              "name": "Caustic Surge",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1291461,
+              "name": "Virulent Fumes",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1294994,
+              "name": "Stygian Infection",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1295173,
+              "name": "Exploding Infection",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "CL.dispel",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1295224,
+              "name": "Siphoning Infection (Main debuff)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "warning"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (warning)"
+            },
+            {
+              "spellID": 1295380,
+              "name": "Siphoning Infection (Healing main debuffed player)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "info"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "B",
+              "why": "BigWigs alerts on it (info)"
+            },
+            {
+              "spellID": 1297338,
+              "name": "Deadly Venom (Standing in venom?)",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "underyou"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "A",
+              "why": "move"
+            },
+            {
+              "spellID": 1304459,
+              "name": "Malignance",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "CL.mythic",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            },
+            {
+              "spellID": 1305833,
+              "name": "Congealing Bolt",
+              "flags": [],
+              "aura": true,
+              "sounds": {
+                "soundOnApplied": "none",
+                "soundOnAppliedDose": "none"
+              },
+              "note": "",
+              "dispel": "",
+              "class": "C",
+              "why": "aura, but BigWigs stays silent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
