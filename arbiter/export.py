@@ -4,7 +4,8 @@ The text report is for reading once. Everything else anybody has wanted from
 this tool -- how a habit moved across a month, whether a band is calibrated,
 what a dungeon's par time must be -- is a question across MANY keys, and the
 only way to ask it was to re-parse gigabytes of log. A 365 MB night reduces to
-about 40 KB here, which is small enough to keep beside the repo forever.
+about 100 KB here -- 17 KB a key -- which is small enough to keep beside
+the repo forever.
 
 Deliberately flat and boring: no objects, no dates as objects, nothing that
 needs this package to interpret. Every axis carries its `raw` pre-band value,

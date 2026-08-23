@@ -91,7 +91,7 @@ BEYOND THE GRADES ---------------------------------------------------------
                cooldown, and the mana floor. Printed under the grade and never
                weighted -- the model scores outcomes, but a habit is the part
                somebody can change on the next pull.
-  --json       a night as ~85 KB of flat data, every axis with its pre-band
+  --json       a night as ~100 KB of flat data, every axis with its pre-band
                `raw`. Recalibrating a band or tracking a habit across a month
                no longer means re-parsing gigabytes.
 

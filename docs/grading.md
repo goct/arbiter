@@ -314,7 +314,7 @@ credit for it anywhere.
 python grade.py <log> --all --json night.json --quiet
 ```
 
-A 365 MB night reduces to about 85 KB of flat JSON: every axis with its **pre-band `raw`
+A 365 MB night of six keys reduces to about 100 KB of flat JSON: every axis with its **pre-band `raw`
 value**, every pull, every death, the time ledger, per-player habits. That is what `Axis.raw`
 was being carried for — recalibrating a band against a corpus, or asking how a habit moved
 across a month, previously meant re-parsing gigabytes of log.

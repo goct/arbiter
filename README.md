@@ -113,9 +113,9 @@ rather than being quietly graded.
   floor, and buttons that never came off the bar. Printed under the grade and never
   weighted: the model scores outcomes, but a habit is the part somebody can change on the
   next pull.
-- **`--json`** — a night as ~40 KB of flat data, every axis carrying its pre-band `raw`
-  value. Recalibrating a band or tracking a habit across a month no longer means re-parsing
-  gigabytes.
+- **`--json`** — a night as ~100 KB of flat data, 17 KB a key, every axis carrying its
+  pre-band `raw` value. Recalibrating a band or tracking a habit across a month no longer
+  means re-parsing gigabytes.
 
 ## Commands
 
