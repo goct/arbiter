@@ -750,8 +750,16 @@ def death_forensics(run, windows, avoid):
                           if lo <= ht <= t + 0.5 and a > 0 and who != guid})
         own = [sp for ct, sp in run.casts.get(guid, [])
                if t - 12 <= ct <= t and sp in K.PERSONAL_DEFENSIVES]
+        # An external cast on YOURSELF is not an external received, and printing
+        # it as "Blessing of Protection from Hyporock" under Hyporock's own
+        # death read as though somebody had tried to save him. It belongs with
+        # the buttons he pressed himself -- which is where the question "was it
+        # the right button" gets asked.
+        own += [sp for ct, cg, sp, dg in run.ext_casts
+                if t - 12 <= ct <= t and dg == guid and cg == guid
+                and sp not in own]
         ext = [(sp, run.name_of(cg)) for ct, cg, sp, dg in run.ext_casts
-               if t - 12 <= ct <= t and dg == guid]
+               if t - 12 <= ct <= t and dg == guid and cg != guid]
         out.append({
             "t": t, "at": t - t0, "guid": guid, "name": run.name_of(guid),
             "killer": killer, "burst": burst, "by": by.most_common(3),

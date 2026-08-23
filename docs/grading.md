@@ -408,6 +408,30 @@ Two smaller ones alongside it:
 
 ## Known limits
 
+- **The mitigation bands are now too generous, and this is the biggest open problem.** They
+  were cut against numbers produced by a bug in `derive.aura_intervals` that read a Vengeance
+  DH's Demon Spikes at 31% uptime when it was 100% (see below). With the bug fixed, every tank
+  in the corpus scores at or near **100** on the axis, which means it no longer discriminates
+  at all. It needs re-cutting against corrected keys before any mitigation number is worth
+  reading.
+- **A same-timestamp `REMOVED`/`APPLIED` pair is a refresh, and sorting it wrong inverts it.**
+  `sorted(events)` on `(t, event)` tuples breaks ties alphabetically, and `SPELL_AURA_APPLIED`
+  sorts before `SPELL_AURA_REMOVED`. That closed each aura window at the instant it should have
+  re-opened. Fixed on 2026-08-22 with a sort on the timestamp alone, which is stable and so
+  keeps ties in file order — but the same shape of bug is available anywhere else events are
+  sorted as tuples.
+- **Crowd control reaches no axis for a spec that has an interrupt.** CC only counts as utility
+  for a `KICKLESS` spec, because for everyone else a stun that stopped a cast is already paid
+  for under `interrupts`. The gap that leaves is real: a Vengeance DH pressing Sigil of Silence
+  5–9 times and Sigil of Spite 13–18 times a key is credited for neither, and his utility axis
+  prices exactly two buttons.
+- **A situational button cannot be priced by availability.** Blessing of Freedom was added to
+  `EXTERNALS` and reverted the same day: its measured recharge is 31 s, the shortest in the set,
+  so pricing it by availability invented ~50 "presses offered" a key and cost a Holy Paladin 27
+  points of utility for not pressing a snare-break on cooldown. Same failure as Spellsteal in
+  `presses_available`.
+
+
 - **The dispel axis is currently a flat zero, and that is the finding.** Across the five
   Season 2 keys that had any dispellable debuff at all, the group made **one** qualifying
   cleanse out of 100 chances, leaving roughly **135 M damage** on the table — 40 M of it

@@ -285,11 +285,22 @@ def trend(name, entries):
     if not entries:
         print(f"no keys in this log contain a player called {name!r}")
         return
-    spec = entries[0]["spec"]
+    # A player who changed spec mid-night did two different jobs, and the axes
+    # are not the same set for both. Labelling the whole table with the spec
+    # from the FIRST key called a night "Devourer DH" that was tanked five keys
+    # out of six, and silently mixed a DPS row into a tank column.
+    specs = [e["spec"] for e in entries]
+    swapped = len(set(specs)) > 1
+    spec = max(set(specs), key=specs.count)
     used = [a for a in TREND_AXES
             if any(a in e["axes"] and e["axes"][a] is not None for e in entries)]
-    print(f"== {entries[0]['name']}  {spec}  --  {len(entries)} keys ==" + chr(10))
-    hdr = f"{'key':24} {'lvl':>4} {'grade':>7}  " + "  ".join(f"{a[:4]:>4}" for a in used)
+    head = f"== {entries[0]['name']}  {spec}"
+    if swapped:
+        head += f"  (+{len(set(specs)) - 1} other spec this log)"
+    print(head + f"  --  {len(entries)} keys ==" + chr(10))
+    scol = max((len(x) for x in set(specs)), default=0) + 2 if swapped else 0
+    hdr = (f"{'key':24} {'lvl':>4} " + (f"{'spec':<{scol}}" if swapped else "")
+           + f"{'grade':>7}  " + "  ".join(f"{a[:4]:>4}" for a in used))
     print(hdr)
     print("-" * len(hdr))
     for e in entries:
@@ -297,8 +308,10 @@ def trend(name, entries):
         for a in used:
             v = e["axes"].get(a)
             cells.append("   -" if v is None else f"{v:4.0f}")
-        print(f"{e['run'][:24]:24} {e['level']:>4} {e['letter']:>3} {e['total']:3.0f}  "
-              + "  ".join(cells))
+        row = f"{e['run'][:24]:24} {e['level']:>4} "
+        if swapped:
+            row += f"{e['spec']:<{scol}}"
+        print(row + f"{e['letter']:>3} {e['total']:3.0f}  " + "  ".join(cells))
     print("-" * len(hdr))
     med = statistics.median([e["total"] for e in entries])
     cells = []
@@ -306,7 +319,11 @@ def trend(name, entries):
         vals = [e["axes"][a] for e in entries
                 if a in e["axes"] and e["axes"][a] is not None]
         cells.append(f"{statistics.median(vals):4.0f}" if vals else "   -")
-    print(f"{'median':24} {'':>4} {'':>3} {med:3.0f}  " + "  ".join(cells))
+    print(f"{'median':24} {'':>4} " + (f"{'':<{scol}}" if swapped else "")
+          + f"{'':>3} {med:3.0f}  " + "  ".join(cells))
+    if swapped:
+        print(chr(10) + "NOTE: this player changed spec inside this log. A median down a "
+              "column mixes two roles; read the rows, not the median.")
     worst = min(used, key=lambda a: statistics.median(
         [e["axes"][a] for e in entries if e["axes"].get(a) is not None] or [100]))
     print(chr(10) + f"Weakest axis across the night: {worst}. "

@@ -173,6 +173,9 @@ or the model did.
 - The bands were cut from **one player's** corpus of Season 2 keys — sixteen runs, one
   healer, one tank. They encode that player's range and will want re-cutting against a
   wider corpus.
+- **`mitigation` currently scores every tank at or near 100** and should not be read. Its
+  bands were calibrated against numbers produced by a since-fixed aura-parsing bug, and they
+  have not been re-cut.
 - Only **37%** of a typical player's talented buttons are classified, so most of a wide kit
   reaches the report as a name and reaches no axis at all. Coverage is worst where the kit
   is widest: 11% for a Warlock, 60% for a Vengeance DH.
