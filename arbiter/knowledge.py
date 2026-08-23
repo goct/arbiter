@@ -94,6 +94,12 @@ EXTERNALS = {
     "Blessing of Protection", "Blessing of Sacrifice", "Blessing of Spellwarding",
     "Pain Suppression", "Guardian Spirit", "Life Cocoon", "Ironbark", "Time Dilation",
     "Vigilance", "Sacrificial Pact",
+    # Blessing of Freedom is a genuine external and is deliberately NOT here.
+    # Its measured recharge is 31s -- the shortest of any spell in this set --
+    # so pricing it by availability handed a Holy Paladin ~50 extra "presses
+    # offered" a key and dropped his utility from 100 to 73 for not pressing a
+    # snare-break on cooldown. Same failure as Spellsteal in `presses_available`:
+    # a situational button cannot be graded on how often it was up.
 }
 RAID_COOLDOWNS = {
     "Aura Mastery", "Power Word: Barrier", "Spirit Link Totem", "Darkness",
@@ -161,25 +167,41 @@ CLASSIFIED = (PERSONAL_DEFENSIVES | EXTERNALS | RAID_COOLDOWNS | CC | DISPEL_SPE
 def buttons(info):
     """Every talented ability this player could actually have PRESSED.
 
-    The union of two imperfect sources, deliberately. The talent tree's `type`
-    field knows about buttons no hand-written list in this file has ever heard
-    of -- across the 2026-08-21 corpus the lists recognise 40% of the active
-    talents people actually take, so a Destruction Warlock sat on Demonic Circle
-    and Curse of Tongues for six keys and every report came back clean. The
-    lists in turn know about buttons the tree gets wrong: the Midnight dump
-    types Renewing Blaze and Shield of Vengeance `passive` and both are things
-    a player presses.
+    The talent tree's own `active`/`passive` flag was tried as a source here and
+    is NOT trustworthy in either direction, so it is deliberately not used:
 
-    Union rather than either one alone, so the answer only ever GROWS -- the
-    same one-directional rule the spell registry runs on. Trusting `type` on its
-    own silently dropped two abilities out of two players' habit lines the first
-    time this was tried, which is exactly the failure mode a kit derived from
-    presses already had.
+      - It types things `active` that nobody presses. Auras of the Resolute is
+        an aura upgrade delivered as a castable spell; the Paladin who has had
+        it reported as "never pressed" in two nights of reports does not have it
+        on a bar and should not.
+      - It types things `passive` that are pressed. The Midnight dump calls
+        Renewing Blaze and Shield of Vengeance passive and both are buttons.
+
+    Worse, a loadout is not a list of CHOICES. Class-tree root nodes carry no
+    prerequisite and arrive free: measured across both nights' corpora, every
+    Paladin has Auras of the Resolute, every Demon Hunter has Sigil of Misery,
+    every Warrior has Defensive Stance and every Death Knight has Death Strike.
+    `COMBATANT_INFO` cannot distinguish "chose this and never used it" from "was
+    handed this and never had it on a bar", and the first is a habit worth
+    naming while the second is noise.
+
+    So ownership is asserted only where a hand-written list below already says
+    what the ability is FOR. That is a narrow answer -- it covers about 37% of
+    what people actually talent -- but it is one that has never been wrong,
+    which the wider one was within a day of shipping.
+
+    One limit remains and is not fixable from a log: a CLASS-tree entry is not
+    proof the ability exists in the player's current SPEC. Sigil of Misery is a
+    class-tree root every Demon Hunter's COMBATANT_INFO reports, and the tank in
+    this corpus pressed it 8 times across three Devourer keys and zero times
+    across eleven Vengeance ones -- while pressing Sigil of Silence and Sigil of
+    Spite in every one of those eleven. He was told he had skipped it all night.
+    He did not have it. Treat a `never pressed` line on a class-tree ability as a
+    question, not a finding.
 
     Baseline abilities are not here and never were; they are not in the tree.
     Callers add what the player was seen to press."""
-    tal = set(info.get("talents") or ())
-    return set(info.get("actives") or ()) | (tal & CLASSIFIED)
+    return set(info.get("talents") or ()) & CLASSIFIED
 
 
 def role_of(spec):

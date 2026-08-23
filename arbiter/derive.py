@@ -497,6 +497,41 @@ def avoidable_damage(run, abilities):
     return per
 
 
+DISPEL_GCD = 8.0
+
+
+def reachable_dispels(windows, registry):
+    """How many of these debuffs ONE dispeller could actually have removed.
+
+    Opportunities are counted per debuff instance, and instances overlap: in a
+    single Blinding Vale key five were live at the same moment, against a Cleanse
+    that recharges in about nine seconds. Scoring 7 of 23 there charges a healer
+    for sixteen debuffs, most of which fell off on their own before the button
+    was back. That is rule 2 -- never score a player on something they could not
+    do -- being broken by the denominator rather than by the axis.
+
+    So the denominator is capped at what one presser could reach: earliest
+    deadline first, one press per recharge, and a press only counts if it lands
+    while the debuff is still up. Measured on 2026-08-22 this moves a real key
+    from 30% to 47% and another from 40% to 53% -- the gap is smaller than the
+    raw count says and it does not vanish.
+
+    Deliberately ONE dispeller, not the party's total. A healer is not graded on
+    whether the Feral happened to also press Soothe."""
+    if not windows:
+        return 0
+    cd = min([c for c in (registry.cooldowns.get(s) for s in K.DISPEL_SPELLS)
+              if c] or [DISPEL_GCD])
+    cd = max(cd, DISPEL_GCD)
+    ready, taken = float("-inf"), 0
+    for a, b in sorted(windows, key=lambda w: w[1]):
+        press = max(a, ready + cd)
+        if press <= b:
+            taken += 1
+            ready = press
+    return taken
+
+
 def dispel_board(run, registry):
     """Dispellable debuffs that landed, and how fast they came off.
 
@@ -521,6 +556,7 @@ def dispel_board(run, registry):
     for t, sid, name, dest in run.debuffs:
         starts[(sid, dest)].append((t, name))
     opps = cleansed = sustained = 0
+    windows = []            # (start, end) of every counted opportunity
     lat, missed = [], collections.Counter()
     hurt, seen = collections.Counter(), collections.defaultdict(set)
     left_up = collections.Counter()
@@ -552,6 +588,7 @@ def dispel_board(run, registry):
             if not known:
                 continue
             opps += 1
+            windows.append((t, end))
             seen[name].add(dest)
             hit = next((d for d in done.get(key, []) if t <= d <= end), None)
             if hit:
@@ -568,6 +605,7 @@ def dispel_board(run, registry):
     worst = sorted(((n, missed[n], left_up[n], hurt[n]) for n in missed),
                    key=lambda x: -x[2])[:4]
     return {"capable": True, "opportunities": opps, "cleansed": cleansed,
+            "reachable": reachable_dispels(windows, registry),
             "latency": lat, "worst": worst, "sustained": sustained,
             "attempts": collections.Counter(g for _t, g, *_ in run.dispels),
             "friendly_attempts": collections.Counter(

@@ -890,30 +890,15 @@ class TalentTests(unittest.TestCase):
     shrinks when the player skips a button, so skipping it improves the grade.
     """
 
-    def test_tree_actives_widen_the_kit(self):
-        info = {"talents": {"Darkness", "Frailty"}, "actives": {"Darkness",
-                                                                "Sigil of Spite"}}
-        # Sigil of Spite is in no hand-written list; the tree is the only thing
-        # that knows it is a button at all.
-        self.assertIn("Sigil of Spite", K.buttons(info))
-        self.assertIn("Darkness", K.buttons(info))
-        # Frailty is a passive and was never a button.
-        self.assertNotIn("Frailty", K.buttons(info))
-
-    def test_a_classified_button_survives_a_wrong_tree_type(self):
-        # The Midnight dump types Renewing Blaze and Shield of Vengeance
-        # `passive`; both are pressed. Trusting `type` alone dropped them out of
-        # two players' habit lines, so the union has to keep them.
-        info = {"talents": {"Renewing Blaze", "Shield of Vengeance"}, "actives": set()}
-        self.assertEqual(K.buttons(info),
-                         {"Renewing Blaze", "Shield of Vengeance"})
-
-    def test_buttons_never_shrink(self):
-        # The property that matters: whatever the tree says, the answer is never
-        # smaller than what the name lists alone would have given.
-        info = {"talents": {"Darkness", "Blessing of Freedom", "Frailty"},
-                "actives": {"Sigil of Spite"}}
-        self.assertTrue(K.buttons(info) >= (info["talents"] & K.CLASSIFIED))
+    def test_a_false_active_never_reaches_the_habit_line(self):
+        # Auras of the Resolute is typed `active` in the Midnight tree dump and
+        # is a passive aura upgrade. Reported as "never pressed" for two nights
+        # before the Paladin who supposedly had it said he had never heard of
+        # it. The tree's own flag is not evidence that something is a button.
+        info = {"talents": {"Auras of the Resolute", "Blessing of Sacrifice"},
+                "actives": {"Auras of the Resolute", "Blessing of Sacrifice"}}
+        self.assertNotIn("Auras of the Resolute", K.buttons(info))
+        self.assertIn("Blessing of Sacrifice", K.buttons(info))
 
     def test_missing_talent_data_degrades_to_presses(self):
         self.assertEqual(K.buttons({}), set())
@@ -956,6 +941,48 @@ class TalentTests(unittest.TestCase):
         # The old name-only map is still exactly that, for anything reading it.
         self.assertEqual(set(K.load_talents().values()),
                          {v[0] for v in idx.values()})
+
+
+class DispelCapacityTests(unittest.TestCase):
+    """Overlapping debuffs against one dispel button.
+
+    The denominator used to be a count of what the dungeon applied. A healer was
+    charged for sixteen debuffs in a key where five were live at once and Cleanse
+    recharges in nine seconds.
+    """
+
+    def _reg(self, cd=9.0):
+        reg = K.Registry.__new__(K.Registry)
+        reg.cooldowns = {"Cleanse": cd}
+        return reg
+
+    def test_simultaneous_debuffs_are_not_all_reachable(self):
+        # Five land together and each lasts 6s. One presser at a 9s recharge
+        # reaches exactly one before the rest expire.
+        windows = [(0.0, 6.0)] * 5
+        self.assertEqual(D.reachable_dispels(windows, self._reg()), 1)
+
+    def test_spaced_debuffs_are_all_reachable(self):
+        windows = [(t, t + 6.0) for t in (0.0, 20.0, 40.0, 60.0)]
+        self.assertEqual(D.reachable_dispels(windows, self._reg()), 4)
+
+    def test_a_long_debuff_can_wait_for_the_recharge(self):
+        # Two land together but sit for 30s, so the second is reachable on the
+        # next charge. Length is what decides it, not simultaneity.
+        windows = [(0.0, 30.0), (0.0, 30.0)]
+        self.assertEqual(D.reachable_dispels(windows, self._reg()), 2)
+
+    def test_the_cap_never_exceeds_the_instances(self):
+        windows = [(0.0, 500.0)]
+        self.assertEqual(D.reachable_dispels(windows, self._reg()), 1)
+
+    def test_no_debuffs_is_not_a_divide_by_zero(self):
+        self.assertEqual(D.reachable_dispels([], self._reg()), 0)
+
+    def test_a_missing_cooldown_falls_back_to_a_global(self):
+        reg = K.Registry.__new__(K.Registry)
+        reg.cooldowns = {}
+        self.assertEqual(D.reachable_dispels([(0.0, 6.0)] * 5, reg), 1)
 
 
 class _TmpPath:

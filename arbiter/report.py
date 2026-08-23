@@ -196,12 +196,6 @@ def grades(run, ev, rows):
             print(f"     battle resurrections cast: {r['rezzes']}")
         if r.get("unused"):
             print(f"     never pressed: {', '.join(r['unused'][:6])}")
-        if r.get("unused_other"):
-            # Talented buttons the model cannot classify. Named, never counted:
-            # nothing here has a measured cooldown behind it, so there is no
-            # honest claim about how often it should have come off the bar.
-            print("     also talented, never pressed (unclassified): "
-                  + ", ".join(r["unused_other"][:8]))
         if r["avoid"]["detail"]:
             worst = ", ".join(f"{sp} x{mine} (peers {med:.0f})"
                               for sp, mine, med, _amt in r["avoid"]["detail"][:3])

@@ -370,9 +370,18 @@ def evaluate(run, registry, abilities):
             ax.append(Axis("response", band(resp, 1.16, 2.60), 0,
                            f"{resp:.1f}x baseline output during the worst windows", resp))
             if disp["capable"] and disp["opportunities"] >= 5:
-                dr = disp["cleansed"] / disp["opportunities"]
-                ax.append(Axis("dispel", band(dr, .05, .70), 0,
-                               f"{disp['cleansed']}/{disp['opportunities']} cleansed", dr))
+                # Against what ONE dispeller could reach, not the raw instance
+                # count -- see `derive.reachable_dispels`. Overlapping debuffs
+                # against a nine-second recharge made the old denominator a
+                # count of what the dungeon applied rather than of what anybody
+                # could have removed.
+                reach = max(disp.get("reachable") or 0, disp["cleansed"], 1)
+                dr = disp["cleansed"] / reach
+                note = f"{disp['cleansed']}/{reach} of what one dispeller could reach"
+                if reach < disp["opportunities"]:
+                    note += (f" ({disp['opportunities']} landed; the rest overlapped "
+                             f"a debuff already being cleansed)")
+                ax.append(Axis("dispel", band(dr, .05, .70), 0, note, dr))
             elif (K.DISPELS.get(info["spec"]) and disp["sustained"] >= 20
                   and not disp["friendly_attempts"].get(g)):
                 # The registry learns a debuff is dispellable by watching someone
@@ -416,20 +425,16 @@ def evaluate(run, registry, abilities):
         # for one pull in the key and correctly held the rest of the night --
         # but a button that never came off the bar all run is worth naming.
         #
-        # Split by whether the model knows what the button is FOR (`K.buttons`
-        # explains where the two halves come from). The first list is the part
-        # the axes above were built on; the second is everything else in the
-        # tree. Reported apart rather than merged because an unclassified button
-        # has no measured cooldown behind it and so supports no claim about how
-        # often it SHOULD have come off the bar.
+        # Only abilities `knowledge.buttons` will vouch for -- see there for why
+        # a wider list drawn from the tree's own `active` flag was tried, shipped
+        # and withdrawn inside a day. It filled this line with free root-node
+        # talents nobody chose and passives nobody can press.
         pressed = {sp for _t, sp in run.casts.get(g, [])}
-        never = K.buttons(info) - pressed
-        unused = sorted(never & K.CLASSIFIED)
-        unused_other = sorted(never - K.CLASSIFIED)
+        unused = sorted(K.buttons(info) - pressed)
 
         rows[g] = {
             "axes": ax, "live": live, "total": total, "letter": letter(total),
-            "unused": unused, "unused_other": unused_other,
+            "unused": unused,
             "dps": dps[g], "hps": hps[g], "taken": taken[g], "incoming": incoming[g],
             "act": act[g], "cpm": cpm[g], "alive": alive[g],
             "avoid": avoid[g], "kicks": board["kick_credit"][g],

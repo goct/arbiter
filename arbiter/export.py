@@ -118,7 +118,6 @@ def _player(run, ev, g):
         "refused_presses": [{"spell": sp, "refused": n, "casts": u}
                             for sp, n, u, _r in row["mash"]],
         "never_pressed": row["unused"],
-        "never_pressed_unclassified": row["unused_other"],
     }
 
 
