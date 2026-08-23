@@ -170,7 +170,7 @@ def learn_abilities(run, registry):
             # Demon Spikes -- a six-second buff -- at 120 seconds and handed
             # every tank a 100% mitigation ceiling regardless of their kit.
             closed, open_at = [], None
-            for t, ev in sorted(evs):
+            for t, ev in sorted(evs, key=lambda x: x[0]):   # ties keep FILE order
                 if ev in ("SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH"):
                     if open_at is None:
                         open_at = t
@@ -246,9 +246,22 @@ def aura_intervals(events, end_cap):
     """[(on, off)] from a stream of (t, APPLIED/REFRESH/REMOVED).
 
     Naively zipping applications against removals overcounts badly whenever a
-    refresh lands without an intervening removal."""
+    refresh lands without an intervening removal.
+
+    Sorted by TIMESTAMP ONLY, and the stability of that sort is load-bearing.
+    `sorted(events)` sorts the (t, event) tuples, so a tie breaks alphabetically
+    and "SPELL_AURA_APPLIED" sorts before "SPELL_AURA_REMOVED" -- which silently
+    reverses them. Many buffs log a refresh as REMOVED immediately followed by
+    APPLIED at the same timestamp; reversing that pair closes the window at the
+    instant it should have re-opened and opens a zero-length one in its place.
+
+    It is not a rounding error. A Vengeance DH with 78 such pairs in one key read
+    as 31% Demon Spikes uptime against a true 100%, and the mitigation axis
+    published a collapse from 74 to 26 that never happened. Events arrive from
+    the collector in file order, so sorting on `x[0]` alone keeps ties in the
+    order the game wrote them."""
     out, open_at = [], None
-    for t, ev in sorted(events):
+    for t, ev in sorted(events, key=lambda x: x[0]):
         if ev in ("SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH"):
             if open_at is None:
                 open_at = t
@@ -273,13 +286,29 @@ def merge(spans):
     return [tuple(x) for x in out]
 
 
-def mitigation_spans(run, guid, end_cap):
-    """When ANY personal defensive was up on this player."""
+def mitigation_spans(run, guid, windows, end_cap):
+    """When ANY personal defensive was up on this player, DURING combat.
+
+    Clipped to the combat windows because the uptime it feeds is divided by
+    combat seconds. A defensive held through a pull timer or a walk between
+    packs is real, but counting it against a denominator that excludes those
+    seconds produced uptimes above 100%."""
     spans = []
     for spell, evs in run.self_aura.get(guid, {}).items():
         if spell in K.PERSONAL_DEFENSIVES:
             spans += aura_intervals(evs, end_cap)
-    return merge(spans)
+    return clip(merge(spans), windows)
+
+
+def clip(spans, windows):
+    """The parts of `spans` that fall inside `windows`."""
+    out = []
+    for a, b in spans:
+        for wa, wb in windows:
+            lo, hi = max(a, wa), min(b, wb)
+            if hi > lo:
+                out.append((lo, hi))
+    return merge(out)
 
 
 def achievable_uptime(run, guid, combat, registry, shared=()):

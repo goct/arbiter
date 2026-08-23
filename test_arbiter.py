@@ -943,6 +943,42 @@ class TalentTests(unittest.TestCase):
                          {v[0] for v in idx.values()})
 
 
+class AuraIntervalTests(unittest.TestCase):
+    """Same-timestamp REMOVED/APPLIED pairs, which is how a refresh often logs."""
+
+    def test_a_refresh_logged_as_remove_then_apply_is_continuous(self):
+        # The bug: sorting (t, event) tuples breaks the tie alphabetically, and
+        # APPLIED sorts before REMOVED, so the pair is silently reversed. That
+        # closes the window at the instant it should have re-opened. A Vengeance
+        # DH read 31% Demon Spikes uptime against a true 100%, and the report
+        # published a mitigation collapse that never happened.
+        evs = [(0.0, "SPELL_AURA_APPLIED"),
+               (10.0, "SPELL_AURA_REMOVED"), (10.0, "SPELL_AURA_APPLIED"),
+               (20.0, "SPELL_AURA_REMOVED"), (20.0, "SPELL_AURA_APPLIED"),
+               (30.0, "SPELL_AURA_REMOVED")]
+        iv = D.aura_intervals(evs, 100.0)
+        self.assertEqual(iv, [(0.0, 30.0)])
+        self.assertAlmostEqual(sum(b - a for a, b in iv), 30.0)
+
+    def test_a_real_gap_is_still_a_gap(self):
+        evs = [(0.0, "SPELL_AURA_APPLIED"), (10.0, "SPELL_AURA_REMOVED"),
+               (25.0, "SPELL_AURA_APPLIED"), (30.0, "SPELL_AURA_REMOVED")]
+        self.assertEqual(D.aura_intervals(evs, 100.0), [(0.0, 10.0), (25.0, 30.0)])
+
+    def test_an_unclosed_aura_runs_to_the_cap(self):
+        evs = [(0.0, "SPELL_AURA_APPLIED")]
+        self.assertEqual(D.aura_intervals(evs, 42.0), [(0.0, 42.0)])
+
+    def test_uptime_cannot_exceed_the_combat_it_is_divided_by(self):
+        # A defensive held through a walk between packs is real, but the
+        # denominator excludes those seconds, so the numerator must too.
+        spans = [(0.0, 100.0)]
+        windows = [(10.0, 20.0), (50.0, 60.0)]
+        self.assertEqual(D.clip(spans, windows), [(10.0, 20.0), (50.0, 60.0)])
+        combat = sum(b - a for a, b in windows)
+        self.assertLessEqual(sum(b - a for a, b in D.clip(spans, windows)), combat)
+
+
 class DispelCapacityTests(unittest.TestCase):
     """Overlapping debuffs against one dispel button.
 

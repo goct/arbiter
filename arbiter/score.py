@@ -297,7 +297,7 @@ def evaluate(run, registry, abilities):
                            "no utility cooldown with a measured recharge yet"))
 
         if r == "tank":
-            spans = D.mitigation_spans(run, g, end_cap)
+            spans = D.mitigation_spans(run, g, windows, end_cap)
             up = sum(b - a for a, b in spans) / max(combat, 1)
             worst = D.worst_windows(run.taken_events.get(g, []))
             cov = (sum(1 for a, b, _v in worst if D.overlap(a, b, spans) > 0.5)
