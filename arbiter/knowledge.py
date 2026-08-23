@@ -164,7 +164,7 @@ SEED_DISPELLABLE = {
 CLASSIFIED = (PERSONAL_DEFENSIVES | EXTERNALS | RAID_COOLDOWNS | CC | DISPEL_SPELLS)
 
 
-def buttons(info):
+def buttons(info, registry=None):
     """Every talented ability this player could actually have PRESSED.
 
     The talent tree's own `active`/`passive` flag was tried as a source here and
@@ -199,9 +199,38 @@ def buttons(info):
     He did not have it. Treat a `never pressed` line on a class-tree ability as a
     question, not a finding.
 
+    Pass a `registry` and one more filter applies: an ability some OTHER spec has
+    been observed casting, and this one never has, is treated as spec-gated and
+    dropped. That is what finally answers the Sigil of Misery case rather than
+    just documenting it.
+
     Baseline abilities are not here and never were; they are not in the tree.
     Callers add what the player was seen to press."""
-    return set(info.get("talents") or ()) & CLASSIFIED
+    owned = set(info.get("talents") or ()) & CLASSIFIED
+    if registry is None:
+        return owned
+    # Positive evidence of a spec gate. If some spec has been SEEN casting this
+    # spell and this player's spec is not among them, the loadout is claiming an
+    # ability the spec does not grant. Sigil of Misery is the case that forced
+    # this: a class-tree root every Demon Hunter reports, cast 8 times across
+    # three Devourer keys and zero times across eleven Vengeance ones.
+    #
+    # One-directional, like everything else the registry decides. A spell NOBODY
+    # has been seen casting is left alone rather than excluded -- otherwise the
+    # first Mage who never presses Ice Block all season would exempt every Mage
+    # after him from ever being asked about it.
+    spec = info.get("spec")
+    # getattr, not attribute access: a registry loaded from a file written
+    # before this key existed simply has no opinion, and should degrade to the
+    # unfiltered answer rather than raising.
+    table = getattr(registry, "by_spec", None) or {}
+    out = set()
+    for name in owned:
+        seen = table.get(name)
+        if seen and spec is not None and spec not in seen:
+            continue
+        out.add(name)
+    return out
 
 
 def role_of(spec):
@@ -301,6 +330,7 @@ class Registry:
         self.cooldowns = {}     # spell -> resolved seconds between casts
         self.samples = {}       # spell -> [observed sustained gaps]
         self.durations = {}     # spell -> longest observed buff duration
+        self.by_spec = {}       # spell -> [spec ids observed casting it]
         if path.exists():
             try:
                 d = json.loads(path.read_text(encoding="utf-8"))
@@ -308,6 +338,8 @@ class Registry:
                 self.dispellable.update(d.get("dispellable", {}))
                 self.cooldowns = d.get("cooldowns", {})
                 self.durations = d.get("durations", {})
+                self.by_spec = {k: list(v) for k, v in
+                                (d.get("cast_by_spec") or {}).items()}
                 # Added after the fact, so an older file has none. Absent
                 # samples degrade to the scalar already stored rather than
                 # wiping every measured cooldown on first load -- a silent
@@ -392,5 +424,6 @@ class Registry:
         self.path.write_text(json.dumps(
             {"interruptible": self.interruptible, "dispellable": self.dispellable,
              "cooldowns": self.cooldowns, "durations": self.durations,
-             "cooldown_samples": self.samples},
+             "cooldown_samples": self.samples,
+             "cast_by_spec": {k: sorted(v) for k, v in self.by_spec.items()}},
             indent=1, sort_keys=True, ensure_ascii=False), encoding="utf-8")

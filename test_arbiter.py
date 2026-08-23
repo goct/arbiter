@@ -900,6 +900,31 @@ class TalentTests(unittest.TestCase):
         self.assertNotIn("Auras of the Resolute", K.buttons(info))
         self.assertIn("Blessing of Sacrifice", K.buttons(info))
 
+    def test_a_spec_gated_ability_is_not_a_habit(self):
+        # Sigil of Misery is a class-tree root every Demon Hunter's loadout
+        # reports. Doryhunky pressed it 8 times across three Devourer keys and
+        # zero across eleven Vengeance ones. He was told he had skipped it all
+        # night; he does not have it in that spec.
+        reg = K.Registry.__new__(K.Registry)
+        reg.by_spec = {"Sigil of Misery": [1480], "Darkness": [581, 1480]}
+        veng = {"talents": {"Sigil of Misery", "Darkness"}, "spec": 581}
+        self.assertEqual(K.buttons(veng, reg), {"Darkness"})
+        devourer = {"talents": {"Sigil of Misery", "Darkness"}, "spec": 1480}
+        self.assertEqual(K.buttons(devourer, reg), {"Sigil of Misery", "Darkness"})
+
+    def test_an_ability_nobody_presses_is_left_alone(self):
+        # Proof runs one way. Excluding what has never been seen would let the
+        # first Mage who ignores Ice Block all season exempt every Mage after.
+        reg = K.Registry.__new__(K.Registry)
+        reg.by_spec = {}
+        info = {"talents": {"Ice Block"}, "spec": 62}
+        self.assertEqual(K.buttons(info, reg), {"Ice Block"})
+
+    def test_a_registry_without_the_table_does_not_raise(self):
+        reg = K.Registry.__new__(K.Registry)   # no by_spec attribute at all
+        info = {"talents": {"Darkness"}, "spec": 581}
+        self.assertEqual(K.buttons(info, reg), {"Darkness"})
+
     def test_missing_talent_data_degrades_to_presses(self):
         self.assertEqual(K.buttons({}), set())
         self.assertEqual(K.buttons({"talents": None, "actives": None}), set())

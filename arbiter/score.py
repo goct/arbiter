@@ -273,7 +273,7 @@ def evaluate(run, registry, abilities):
         # talented Darkness and Sigil of Misery and pressed neither all night.
         # Baseline abilities never appear in the talent tree, so pressing still
         # counts them in.
-        owned = K.buttons(info) | {s for _t, s in run.casts.get(g, [])}
+        owned = K.buttons(info, registry) | {s for _t, s in run.casts.get(g, [])}
         kit = {s for s in owned
                if s in K.EXTERNALS or s in K.RAID_COOLDOWNS or s in K.DISPEL_SPELLS
                or (cc_here and s in K.CC)}
@@ -430,7 +430,7 @@ def evaluate(run, registry, abilities):
         # and withdrawn inside a day. It filled this line with free root-node
         # talents nobody chose and passives nobody can press.
         pressed = {sp for _t, sp in run.casts.get(g, [])}
-        unused = sorted(K.buttons(info) - pressed)
+        unused = sorted(K.buttons(info, registry) - pressed)
 
         rows[g] = {
             "axes": ax, "live": live, "total": total, "letter": letter(total),

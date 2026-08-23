@@ -159,9 +159,17 @@ def learn_abilities(run, registry):
     Cooldowns are a fact about the game, not about the player, so they are
     pooled across every player and every run rather than re-derived per key."""
     for guid in run.players:
+        spec = run.players[guid].get("spec")
         by_spell = collections.defaultdict(list)
         for t, spell in run.casts.get(guid, []):
             by_spell[spell].append(t)
+        # Which specs have been SEEN pressing a thing. Proof runs one way: this
+        # can only ever say "yes, that spec has it", never "no, it does not".
+        if spec is not None:
+            for spell in by_spell:
+                seen = registry.by_spec.setdefault(spell, [])
+                if spec not in seen:
+                    seen.append(spec)
         for spell, times in by_spell.items():
             registry.learn_cooldown(spell, sustained_gap(times))
         for spell, evs in run.self_aura.get(guid, {}).items():
@@ -330,7 +338,7 @@ def achievable_uptime(run, guid, combat, registry, shared=()):
     -- rule 2, nobody is scored on a button they do not have."""
     total, seen = 0.0, set()
     owned = {s for _t, s in run.casts.get(guid, [])}
-    owned |= K.buttons(run.players.get(guid) or {})
+    owned |= K.buttons(run.players.get(guid) or {}, registry)
     for spell in owned:
         if spell not in K.PERSONAL_DEFENSIVES:
             continue
